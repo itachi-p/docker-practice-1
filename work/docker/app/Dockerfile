@@ -1,5 +1,5 @@
 # 1.ベースイメージの指定
-FROM ubuntu:24.10
+FROM ubuntu:20.04
 
 # 2.PHPのインストール(1つのレイヤーとしてまとめるた為に&&を使用)
 # 以下のコマンドは、UbuntuのリポジトリにあるPHPのバージョンが古いため、
@@ -20,4 +20,5 @@ RUN apt install -yqq msmtp msmtp-mta
 COPY ./docker/app/mailrc /etc/msmtprc
 
 # 6.動作確認用コマンド(群)のインストール
+# 必ずしもイメージに含める必要はないが、デバッグや動作確認のためにインストールしておく
 RUN apt install -y curl iputils-ping procps vim tree
