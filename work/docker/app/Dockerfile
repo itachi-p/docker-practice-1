@@ -19,3 +19,5 @@ RUN apt install -yqq msmtp msmtp-mta
 # 5.msmtpの設定ファイルをローカルからコンテナ内部へコピー
 COPY ./docker/app/mailrc /etc/msmtprc
 
+# 6.動作確認用コマンド(群)のインストール
+RUN apt install -y curl iputils-ping procps vim tree
