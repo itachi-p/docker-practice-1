@@ -5,7 +5,7 @@
  */
 
 $host = 'db';
-$port = '3036';
+$port = '3306';
 $database = 'event';
 $dsn = sprintf('mysql:host=%s; port=%s; dbname=%s;', $host, $port, $database);
 
